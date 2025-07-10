@@ -264,24 +264,6 @@ function initInteractiveElements() {
         });
     });
 
-    // Portfolio items hover effects
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-    portfolioItems.forEach(item => {
-        item.addEventListener('mouseenter', function() {
-            const overlay = this.querySelector('.portfolio-overlay');
-            if (overlay) {
-                overlay.style.transform = 'translateY(0)';
-            }
-        });
-        
-        item.addEventListener('mouseleave', function() {
-            const overlay = this.querySelector('.portfolio-overlay');
-            if (overlay) {
-                overlay.style.transform = 'translateY(100%)';
-            }
-        });
-    });
-
     // Team member cards
     const teamMembers = document.querySelectorAll('.team-member');
     teamMembers.forEach(member => {

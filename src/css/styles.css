@@ -590,12 +590,6 @@ section {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-}
-
-.portfolio-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-image {
@@ -624,12 +618,12 @@ section {
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
     color: white;
     padding: 2rem;
-    transform: translateY(100%);
+    transform: translateY(0%);
     transition: transform 0.3s ease;
 }
 
 .portfolio-item:hover .portfolio-overlay {
-    transform: translateY(0);
+    transform: translateY(5px);
 }
 
 .portfolio-overlay h3 {
