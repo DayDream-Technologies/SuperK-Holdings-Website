@@ -447,7 +447,7 @@ function createScrollToTop() {
         right: 30px;
         width: 50px;
         height: 50px;
-        background: #2563eb;
+        background: #1f3b72;
         color: white;
         border: none;
         border-radius: 50%;
