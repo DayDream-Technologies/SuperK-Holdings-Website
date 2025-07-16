@@ -458,24 +458,26 @@ window.addEventListener('scroll', throttle(function() {
 const form = document.querySelector('#contactForm');
 const email = document.querySelector('#email');
 
-form.addEventListener('submit', function (event) {
-    // Simple email regex for validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (form && email) {
+    form.addEventListener('submit', function (event) {
+        // Simple email regex for validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!emailRegex.test(email.value)) {
-        // Prevent form submission if the email is invalid
-        event.preventDefault();
+        if (!emailRegex.test(email.value)) {
+            // Prevent form submission if the email is invalid
+            event.preventDefault();
 
-        // Set a custom validity message
-        email.setCustomValidity('Please enter a valid email address.');
-    } else {
-        // Reset the custom validity if the input is valid
-        email.setCustomValidity('');
-    }
-});
+            // Set a custom validity message
+            email.setCustomValidity('Please enter a valid email address.');
+        } else {
+            // Reset the custom validity if the input is valid
+            email.setCustomValidity('');
+        }
+    });
 
-// Reset custom validity message on every input change
-email.addEventListener('input', function () {
-    email.setCustomValidity(''); // Reset the custom error on input change
-});
+    // Reset custom validity message on every input change
+    email.addEventListener('input', function () {
+        email.setCustomValidity(''); // Reset the custom error on input change
+    });
+}
 /********* End JS for the contact form *********/
